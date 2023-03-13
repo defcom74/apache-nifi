@@ -8,7 +8,7 @@ services:
     environment:
       - SINGLE_USER_CREDENTIALS_USERNAME=admin
       - SINGLE_USER_CREDENTIALS_PASSWORD=ctsBtRBKHRAx69EqUghvvgEvjnaLjFEB
-      - NIFI_WEB_HTTPS_PORT=9443
+      - NIFI_WEB_HTTPS_PORT=9443  #internal port 
       - NIFI.WEB.HTTP.HOST=10.112.161.141
     volumes:
       - nifi_content_repository:/opt/nifi/nifi-current/content_repository
