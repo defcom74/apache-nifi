@@ -4,12 +4,12 @@ services:
     container_name: nifi
     image: 'apache/nifi:1.20.0'
     ports:
-      - 8443:9443
+      - 8443:8443
     environment:
       - SINGLE_USER_CREDENTIALS_USERNAME=admin
       - SINGLE_USER_CREDENTIALS_PASSWORD=ctsBtRBKHRAx69EqUghvvgEvjnaLjFEB
-      - NIFI_WEB_HTTPS_PORT=9443  #internal port 
-      - NIFI.WEB.HTTP.HOST=10.112.161.141
+      - NIFI_WEB_HTTPS_PORT=8443  #internal port 
+      - NIFI.WEB.HTTPS.HOST=10.112.161.141
     volumes:
       - nifi_content_repository:/opt/nifi/nifi-current/content_repository
       - nifi_database_repository:/opt/nifi/nifi-current/database_repository
